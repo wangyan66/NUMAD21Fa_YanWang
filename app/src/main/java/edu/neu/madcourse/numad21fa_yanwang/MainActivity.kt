@@ -2,6 +2,8 @@ package edu.neu.madcourse.numad21fa_yanwang
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.Toast
 
@@ -13,5 +15,20 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener {
             Toast.makeText(this, "Name:Yan Wang\nEmail:wang.yan6@northeastern.edu", Toast.LENGTH_SHORT).show()
         }
+
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId){
+            R.id.remove_item -> Toast.makeText(this, "Remove Something!", Toast.LENGTH_SHORT).show()
+            R.id.exit_item -> finish()
+            R.id.add_item -> Toast.makeText(this, "Add Something!", Toast.LENGTH_SHORT).show()
+        }
+        return true
     }
 }

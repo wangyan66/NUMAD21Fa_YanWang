@@ -4,6 +4,20 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        debug {
+            storeFile file('/Users/wangyan/Desktop/YWKeyStore')
+            storePassword 'wy3612598'
+            keyPassword 'wy3612598'
+            keyAlias 'My Key'
+        }
+        config {
+            storeFile file('/Users/wangyan/Desktop/YWKeyStore')
+            storePassword 'wy3612598'
+            keyAlias 'My Key'
+            keyPassword 'wy3612598'
+        }
+    }
     compileSdk 31
 
     defaultConfig {
@@ -20,6 +34,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
         }
     }
     compileOptions {
