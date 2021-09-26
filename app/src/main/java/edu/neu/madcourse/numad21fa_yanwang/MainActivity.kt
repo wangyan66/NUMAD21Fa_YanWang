@@ -17,8 +17,8 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Name:Yan Wang\nEmail:wang.yan6@northeastern.edu", Toast.LENGTH_SHORT).show()
         }
 
-        val ClickyBtn: Button = findViewById(R.id.button2)
-        ClickyBtn.setOnClickListener {
+        val clickyBtn: Button = findViewById(R.id.button2)
+        clickyBtn.setOnClickListener {
             val intent = Intent(this, SecondActivity::class.java)
             startActivity(intent)
         }

@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">NUMAD21Fa_YanWang</string>
+    <string name="Main_About_Btn">About</string>
+    <string name="Main_Hello_TextView">Hello World!</string>
+    <string name="Main_Clicky_Btn">Clicky Clicky</string>
+    <string name="Second_A_Btn">A</string>
+    <string name="Second_B_Btn">B</string>
+    <string name="Second_C_Btn">C</string>
+    <string name="Second_D_Btn">D</string>
+    <string name="Second_E_Btn">E</string>
+    <string name="Second_F_Btn">F</string>
+
 </resources>
