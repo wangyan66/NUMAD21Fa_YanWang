@@ -1,5 +1,6 @@
 package edu.neu.madcourse.numad21fa_yanwang
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -14,6 +15,12 @@ class MainActivity : AppCompatActivity() {
         val button: Button = findViewById(R.id.button)
         button.setOnClickListener {
             Toast.makeText(this, "Name:Yan Wang\nEmail:wang.yan6@northeastern.edu", Toast.LENGTH_SHORT).show()
+        }
+
+        val ClickyBtn: Button = findViewById(R.id.button2)
+        ClickyBtn.setOnClickListener {
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
         }
 
     }
