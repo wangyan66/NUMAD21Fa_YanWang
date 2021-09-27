@@ -20,6 +20,7 @@ android {
     }
     compileSdk 31
 
+
     defaultConfig {
         applicationId "edu.neu.madcourse.numad21fa_yanwang"
         minSdk 26
@@ -44,6 +45,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
 }
 
 dependencies {
