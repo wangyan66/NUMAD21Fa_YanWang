@@ -7,15 +7,18 @@
         android:id="@+id/link_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Link Name" />
+        android:hint="Link Name"
+        android:layout_marginLeft="23dp"
+        android:textSize="26dp"/>
 
     <EditText
         android:id="@+id/link_url"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/link_name"
+        android:layout_marginLeft="23dp"
         android:hint="Link Url"
-        android:minHeight="48dp" />
+        android:textSize="26dp"/>
 
 </RelativeLayout>
 
