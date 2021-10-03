@@ -52,6 +52,9 @@ class LinkCollectorActivity : AppCompatActivity() {
                             val field : Field = diaglog.javaClass.superclass.superclass.getDeclaredField("mShowing")
                             field.isAccessible = true
                             field.set(diaglog, true)
+                            LinkList.add(0,LinkItem(nameStr,urlStr))
+                            adapter.notifyItemInserted(0)
+                            Toast.makeText(this@LinkCollectorActivity, "Add Link Successfully!", Toast.LENGTH_SHORT).show()
                         }
 
                     }catch (e : IllegalAccessException){
@@ -78,11 +81,7 @@ class LinkCollectorActivity : AppCompatActivity() {
         }
     }
     private fun initLinks(){
-        repeat(9){
-            LinkList.add(LinkItem("bilibli","www.bilibili.com"))
-            LinkList.add(LinkItem("baidu","www.baidu.com"))
-            LinkList.add(LinkItem("Google","www.google.com"))
-        }
+//
     }
 
 }
