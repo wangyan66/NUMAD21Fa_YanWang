@@ -20,10 +20,23 @@ import java.lang.reflect.Field
 
 class LinkCollectorActivity : AppCompatActivity(), OnRecycleViewClickListener{
     private val LinkList = ArrayList<LinkItem>()
+    private val KEY_OF_NUMBER : String = "KEY_OF_NUMBER"
+    private val KEY_OF_INSTANCE : String = "KEY_OF_INSTANCE"
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        if(LinkList != null){
+            val size : Int = LinkList.size
+            outState.putInt(KEY_OF_NUMBER, size)
+            for( i in 0 until size){
+                outState.putString(KEY_OF_INSTANCE + i + "0", LinkList[i].name)
+                outState.putString(KEY_OF_INSTANCE + i + "1", LinkList[i].Url)
+            }
+        }
+    }
     override fun onItemClickListener(pos: Int) {
         val item : LinkItem = LinkList[pos]
         val intent = Intent(Intent.ACTION_VIEW)
-        var url : String = item.Url
+        var url : String = item.Url!!
         if(url.startsWith("www")){
             url = "https://" + url
         }else if(!url.startsWith("https://") && !url.startsWith("http://")){
@@ -36,7 +49,7 @@ class LinkCollectorActivity : AppCompatActivity(), OnRecycleViewClickListener{
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_link_collector)
 
-        initLinks()
+        initLinks(savedInstanceState)
         val layoutManger = LinearLayoutManager(this)
         val adapter = LinkAdapter(LinkList)
         adapter.setListener(this)
@@ -98,8 +111,17 @@ class LinkCollectorActivity : AppCompatActivity(), OnRecycleViewClickListener{
             }
         }
     }
-    private fun initLinks(){
-//
+    private fun initLinks(savedInstanceState: Bundle?){
+        if(savedInstanceState != null){
+            val size : Int = savedInstanceState.getInt("KEY_OF_NUMBER")
+            if(size > 0){
+                for(i in 0 until size){
+                    val item : LinkItem = LinkItem(savedInstanceState.getString(KEY_OF_INSTANCE + i + "0"), savedInstanceState.getString((KEY_OF_INSTANCE + i + "1")))
+                    LinkList.add(i, item)
+                }
+            }
+
+        }
     }
 
 }
