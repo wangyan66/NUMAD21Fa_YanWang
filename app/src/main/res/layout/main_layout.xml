@@ -52,5 +52,16 @@
         app:layout_constraintStart_toStartOf="parent"
         android:textAllCaps="false"/>
 
+    <Button
+        android:id="@+id/enter_location_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/Main_Location_Btn"
+        app:layout_constraintBottom_toTopOf="@+id/link_collector_Btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

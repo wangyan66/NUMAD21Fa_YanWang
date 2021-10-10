@@ -4,6 +4,7 @@
     <string name="Main_Hello_TextView">Hello World!</string>
     <string name="Main_Clicky_Btn">Clicky Clicky</string>
     <string name="Main_Link_Collector_Btn">Link Collector</string>
+    <string name="Main_Location_Btn">Location</string>
     <string name="Second_A_Btn">A</string>
     <string name="Second_B_Btn">B</string>
     <string name="Second_C_Btn">C</string>
