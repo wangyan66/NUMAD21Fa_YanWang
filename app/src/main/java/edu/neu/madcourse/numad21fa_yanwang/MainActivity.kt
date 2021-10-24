@@ -30,11 +30,19 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, LinkCollectorActivity::class.java)
             startActivity(intent)
         }
+
         val enterLocationBtn : Button = findViewById(R.id.enter_location_Btn)
         enterLocationBtn.setOnClickListener {
             val intent = Intent(this, Location::class.java)
             startActivity(intent)
         }
+
+        val enterCoinBtn : Button = findViewById(R.id.enter_coin_Btn)
+        enterCoinBtn.setOnClickListener {
+            val intent = Intent(this, CryptocurrencyActivity::class.java)
+            startActivity(intent)
+        }
+
 
     }
 
