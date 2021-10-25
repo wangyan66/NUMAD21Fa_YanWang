@@ -40,7 +40,7 @@ class LinkCollectorActivity : AppCompatActivity(), OnRecycleViewClickListener{
         if(url.startsWith("www")){
             url = "https://" + url
         }else if(!url.startsWith("https://") && !url.startsWith("http://")){
-            url = "https://www" + url
+            url = "https://www." + url
         }
         intent.data = Uri.parse(url)
         startActivity(intent)
