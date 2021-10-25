@@ -15,5 +15,6 @@
     <string name="Second_D_Btn">D</string>
     <string name="Second_E_Btn">E</string>
     <string name="Second_F_Btn">F</string>
-
+    <string name="CryptoCurrency_Enter_Hint">Please Enter the Symbol of the Cryptocurrency</string>
+    <string name="CryptoCurrency_Symbol_Hint">e.g: BTC, ETH, BNB, DOGE</string>
 </resources>

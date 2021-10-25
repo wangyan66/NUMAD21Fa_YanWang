@@ -8,9 +8,9 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width= "136dp"
+        android:layout_width="136dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:gravity="center"
         android:text="@string/Main_About_Btn"
         android:textAllCaps="false"
@@ -23,7 +23,7 @@
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="12dp"
         android:gravity="center"
         android:text="@string/Main_Hello_TextView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,18 +45,18 @@
         android:id="@+id/link_collector_Btn"
         android:layout_width="136dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="24dp"
         android:text="@string/Main_Link_Collector_Btn"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:textAllCaps="false"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/enter_location_Btn"
         android:layout_width="136dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="24dp"
         android:text="@string/Main_Location_Btn"
         app:layout_constraintBottom_toTopOf="@+id/link_collector_Btn"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,11 +67,11 @@
         android:id="@+id/enter_coin_Btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:text="@string/Main_Coin_Btn"
-        app:layout_constraintTop_toBottomOf="@id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
